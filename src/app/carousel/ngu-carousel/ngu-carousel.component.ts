@@ -362,6 +362,7 @@ export class NguCarousel<T> extends NguCarouselStore
     this.carouselLoad.complete();
     this.onMove.complete();
 
+    clearTimeout(this.onScrolling);
     /** remove listeners */
     for (let i = 1; i <= 4; i++) {
       const str = `listener${i}`;
